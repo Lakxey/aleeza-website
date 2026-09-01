@@ -11,12 +11,7 @@ const LINKS = [
 
 export default function Nav() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 sm:px-10">
-      <a href="#top" className="font-mono text-sm tracking-tight text-fg">
-        {site.name.toLowerCase().replace(/\s+/g, "")}
-        <span className="text-accent">.</span>
-      </a>
-
+    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-end gap-10 border-b border-line bg-bg/80 px-6 py-5 backdrop-blur-md sm:px-10">
       <nav className="hidden gap-8 sm:flex">
         {LINKS.map((link) => (
           <ScrambleLink

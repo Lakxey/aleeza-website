@@ -12,7 +12,7 @@ export default function Work() {
     <section id="work" className="relative px-6 py-28 sm:px-10 sm:py-36">
       <Reveal>
         <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
-          02 / Selected Work
+          02 / Projects Done
         </span>
       </Reveal>
 
@@ -32,7 +32,7 @@ export default function Work() {
               }}
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
-              className={`group relative flex flex-col justify-between gap-4 py-8 sm:flex-row sm:items-center ${
+              className={`group relative grid grid-cols-1 gap-3 py-8 sm:grid-cols-[minmax(0,280px)_1fr_minmax(0,220px)] sm:items-center sm:gap-8 ${
                 project.link ? "cursor-pointer" : ""
               }`}
             >
@@ -49,12 +49,10 @@ export default function Work() {
                 </h3>
               </div>
 
-              <p className="max-w-md text-sm text-fg-dim sm:mx-6">
-                {project.description}
-              </p>
+              <p className="text-sm text-fg-dim">{project.description}</p>
 
-              <div className="flex items-center gap-4">
-                <div className="flex gap-2">
+              <div className="flex flex-wrap items-center gap-4 sm:justify-end">
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}

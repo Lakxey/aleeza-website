@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-:root {
-  --bg: #0b0b0c;
-  --bg-soft: #111113;
-  --fg: #f3f2ee;
-  --fg-dim: #8f8d88;
-  --accent: #d7ff3f;
-  --line: rgba(243, 242, 238, 0.12);
-}
+   :root {
+     --bg: #f7f6f1;
+     --bg-soft: #edece5;
+     --fg: #14140f;
+     --fg-dim: #6b6a62;
+     --accent: #5c8a00;
+     --line: rgba(20, 20, 15, 0.12);
+   }
 
 @theme inline {
   --color-bg: var(--bg);
@@ -34,8 +34,10 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
+  font-weight: 500;
   overflow-x: hidden;
 }
+
 
 ::selection {
   background: var(--accent);

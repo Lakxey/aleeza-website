@@ -11,7 +11,7 @@ export const site = {
   email: "raialeeza2017@gmail.com",
   tagline:
     "Keeping US-based clients' books accurate, compliant, and on time.",
-  availability: "Open to new opportunities", // set to "" to hide the badge
+  availability: "", // set to "" to hide the badge
 };
 
 export const about = {

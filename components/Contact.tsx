@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="mt-12 flex flex-col items-start gap-10 sm:flex-row sm:items-center">
           <MagneticButton
             href={`mailto:${site.email}`}
-            className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-sm uppercase tracking-widest text-bg"
+            className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-sm  tracking-widest text-bg"
           >
             {site.email}
             <span>↗</span>
