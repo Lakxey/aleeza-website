@@ -5,34 +5,38 @@
 // ---------------------------------------------------------------------------
 
 export const site = {
-  name: "Your Name",
-  role: "What You Do",
-  location: "Kathmandu, Nepal",
-  email: "you@example.com",
-  tagline: "A short, punchy line about what you make or do.",
-  availability: "Available for new projects", // set to "" to hide the badge
+  name: "Aleeza Rai",
+  role: "Senior Accounts Associate",
+  location: "Lalitpur, Nepal",
+  email: "raialeeza2017@gmail.com",
+  tagline:
+    "Keeping US-based clients' books accurate, compliant, and on time.",
+  availability: "Open to new opportunities", // set to "" to hide the badge
 };
 
 export const about = {
   heading: "About",
   paragraphs: [
-    "Write 2–3 sentences about who you are, what you focus on, and what makes your approach different. This is the first real thing people read after the hero — keep it human, not corporate.",
-    "Add a second paragraph if you want — a bit of background, what you're currently exploring, or what you care about outside work.",
+    "I'm a BBA graduate specializing in Finance, currently working as a Senior Accounts Associate at Koirala Advisors — managing bookkeeping and accounting for multiple US-based client companies, from transaction recording and bank reconciliations to financial reporting and month-end close.",
+    "Before that, I worked as an Advisory Associate Intern, supporting company formation, legal documentation, and client-facing research. I'm QuickBooks Online certified (Level 1 & 2), and known for careful, detail-driven work and clear client communication.",
   ],
   facts: [
-    { label: "Based in", value: "Kathmandu, NP" },
-    { label: "Focus", value: "Your focus area" },
-    { label: "Currently", value: "What you're doing now" },
+    { label: "Based in", value: "Lalitpur, Nepal" },
+    { label: "Focus", value: "Accounting & Finance" },
+    { label: "Currently", value: "Senior Accounts Associate, Koirala Advisors" },
+    { label: "Certified in", value: "QuickBooks Online (Level 1 & 2)" },
   ],
 };
 
 export const skills = [
-  "Skill One",
-  "Skill Two",
-  "Skill Three",
-  "Skill Four",
-  "Skill Five",
-  "Skill Six",
+  "Accounting & Bookkeeping",
+  "QuickBooks Online",
+  "Bank Reconciliation",
+  "Financial Reporting",
+  "MySQL",
+  "Client Handling",
+  "Research & Analysis",
+  "Attention to Detail",
 ];
 
 export type Project = {
@@ -46,34 +50,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Project One",
-    year: "2026",
-    description: "One or two sentences on what this project is and the result you got.",
-    tags: ["Tag", "Tag"],
-    link: "#",
+    title: "Risk & Return: FD vs. Stock Market",
+    year: "2025",
+    description:
+      "Compared returns on bank fixed deposits and stocks using annual return, CAGR, standard deviation, and Sharpe ratio to guide investor decisions.",
+    tags: ["Financial Research"],
     accent: "from-[var(--accent)] to-transparent",
   },
   {
-    title: "Project Two",
+    title: "E-commerce Case Study — Jeevee",
     year: "2025",
-    description: "One or two sentences on what this project is and the result you got.",
-    tags: ["Tag", "Tag"],
-    link: "#",
+    description:
+      "Analyzed a digital business model, UX, and operations through primary interviews, and gave strategic recommendations for growth and retention.",
+    tags: ["Business Analysis"],
     accent: "from-fuchsia-500 to-transparent",
   },
   {
-    title: "Project Three",
-    year: "2025",
-    description: "One or two sentences on what this project is and the result you got.",
-    tags: ["Tag", "Tag"],
-    link: "#",
+    title: "Organizational Information System Analysis",
+    year: "2024",
+    description:
+      "Evaluated a business information system for efficiency, scalability, and security, and proposed ROI-linked improvements.",
+    tags: ["Systems Analysis"],
     accent: "from-sky-400 to-transparent",
+  },
+  {
+    title: "MySQL Database Lab Report",
+    year: "2023",
+    description:
+      "Designed relational databases using DDL, DML, joins, and views, with clear documentation of structure and optimization.",
+    tags: ["Database"],
+    accent: "from-orange-400 to-transparent",
   },
 ];
 
 export const socials = [
-  { label: "Email", href: "mailto:you@example.com" },
-  { label: "GitHub", href: "https://github.com/yourname" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourname" },
-  { label: "Twitter / X", href: "https://x.com/yourname" },
+  { label: "Email", href: "mailto:raialeeza2017@gmail.com" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/aleeza-rai/" },
+  { label: "Phone", href: "tel:+9779840522269" },
 ];
+
+export const contact = {
+  heading: "Let's make your books work for you.",
+};

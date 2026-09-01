@@ -19,11 +19,22 @@ export default function Work() {
       <div className="mt-10 divide-y divide-line border-t border-b border-line">
         {projects.map((project, i) => (
           <Reveal key={project.title} delay={i * 0.05}>
-            <a
-              href={project.link}
+            <div
+              role={project.link ? "link" : undefined}
+              tabIndex={project.link ? 0 : undefined}
+              onClick={() => {
+                if (project.link) window.location.href = project.link;
+              }}
+              onKeyDown={(e) => {
+                if (project.link && (e.key === "Enter" || e.key === " ")) {
+                  window.location.href = project.link;
+                }
+              }}
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
-              className="group relative flex flex-col justify-between gap-4 py-8 sm:flex-row sm:items-center"
+              className={`group relative flex flex-col justify-between gap-4 py-8 sm:flex-row sm:items-center ${
+                project.link ? "cursor-pointer" : ""
+              }`}
             >
               <div
                 className={`pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r ${project.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-10`}
@@ -56,14 +67,16 @@ export default function Work() {
                 <span className="font-mono text-sm text-fg-dim">
                   {project.year}
                 </span>
-                <motion.span
-                  animate={{ x: active === i ? 4 : 0 }}
-                  className="font-mono text-accent"
-                >
-                  →
-                </motion.span>
+                {project.link && (
+                  <motion.span
+                    animate={{ x: active === i ? 4 : 0 }}
+                    className="font-mono text-accent"
+                  >
+                    →
+                  </motion.span>
+                )}
               </div>
-            </a>
+            </div>
           </Reveal>
         ))}
       </div>

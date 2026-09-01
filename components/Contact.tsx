@@ -1,4 +1,4 @@
-import { site, socials } from "@/app/content";
+import { site, socials, contact } from "@/app/content";
 import MagneticButton from "./MagneticButton";
 import Reveal from "./Reveal";
 
@@ -16,7 +16,7 @@ export default function Contact() {
 
       <Reveal delay={0.1}>
         <h2 className="mt-8 max-w-3xl font-display text-5xl italic leading-tight text-fg sm:text-7xl">
-          Let&rsquo;s make something worth talking about.
+          {contact.heading}
         </h2>
       </Reveal>
 
