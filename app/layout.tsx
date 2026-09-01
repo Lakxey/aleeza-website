@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 // Self-hosted fonts (Fontsource) — bundled at build time, no runtime fetch
 // to Google's servers, so the site never depends on that network call.
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="grain" />
         <CustomCursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );
