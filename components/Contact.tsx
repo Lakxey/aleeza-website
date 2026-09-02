@@ -10,7 +10,7 @@ export default function Contact() {
     >
       <Reveal>
         <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
-          03 / Contact
+          03 04 / Contact
         </span>
       </Reveal>
 

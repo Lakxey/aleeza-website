@@ -30,13 +30,63 @@ export const about = {
 
 export const skills = [
   "Accounting & Bookkeeping",
-  "QuickBooks Online",
   "Bank Reconciliation",
   "Financial Reporting",
   "MySQL",
   "Client Handling",
   "Research & Analysis",
   "Attention to Detail",
+];
+
+export const tools = [
+  "QuickBooks Online",
+  "Salesforce",
+  "ADP",
+  "Gusto",
+  "Paychex",
+  "Intuit Link",
+  "ProSeries",
+];
+
+export type ExperienceEntry = {
+  company: string;
+  title: string;
+  dates: string;
+  points: string[];
+};
+
+export const experience: ExperienceEntry[] = [
+  {
+    company: "Koirala Advisors",
+    title: "Senior Accounts Associate",
+    dates: "Apr 2026 — Present",
+    points: [
+      "Manage bookkeeping and accounting activities for multiple US-based client accounts, including reconciliations and month-end processes.",
+      "Review client books for accuracy and tax compliance, ensuring records are properly maintained for year-end reporting.",
+      "Prepare and assist with year-end tax returns, financial reports, and supporting schedules.",
+      "Communicate directly with clients to clarify transactions, resolve discrepancies, and obtain required information.",
+    ],
+  },
+  {
+    company: "Koirala Advisors",
+    title: "Accounts Associate",
+    dates: "Oct 2025 — Apr 2026",
+    points: [
+      "Managed daily bookkeeping for multiple US-based client companies, including recording income and expenses, performing reconciliations, and supporting month-end financial statement preparation.",
+      "Prepared financial reports and summaries for internal and client use.",
+      "Maintained organized financial documents and accounting records while handling accurate data entry.",
+    ],
+  },
+  {
+    company: "Koirala Advisors",
+    title: "Advisory Associate Intern",
+    dates: "Jun 2025 — Oct 2025",
+    points: [
+      "Assisted with preparing US state-wise legal documents for company formation, organization, agreements, wills, and trust documents.",
+      "Organized and maintained client documents and files, and supported client consultations by attending meetings and taking notes.",
+      "Researched US state-specific requirements for establishing or amending client companies.",
+    ],
+  },
 ];
 
 export type Project = {

@@ -9,12 +9,12 @@ export default function Work() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="work" className="relative px-6 py-28 sm:px-10 sm:py-36">
-      <Reveal>
-        <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
-          02 / Projects Done
-        </span>
-      </Reveal>
+    <section id="projects" className="relative px-6 py-28 sm:px-10 sm:py-36">
+  <Reveal>
+    <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
+      03 / Projects Done
+    </span>
+  </Reveal>
 
       <div className="mt-10 divide-y divide-line border-t border-b border-line">
         {projects.map((project, i) => (
