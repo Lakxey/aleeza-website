@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
    :root {
-  --bg: #3a345b; /* Jacarta */
-  --bg-soft: #4b1535; /* Brown Chocolate */
-  --fg: #f3c8dd; /* Queen Pink */
-  --fg-dim: #71557a; /* Old Lavender */
-  --accent: #d183a9; /* Middle Purple */
-  --line: rgba(243, 200, 221, 0.16);
+  --bg: #1c1917; /* deep charcoal */
+  --bg-soft: #221e1b; /* slightly lighter charcoal */
+  --fg: #f5ecdc; /* warm ivory */
+  --fg-dim: rgba(245, 236, 220, 0.62); /* warm ivory, dimmed */
+  --accent: #c9a24b; /* warm gold */
+  --line: rgba(245, 236, 220, 0.14); /* warm ivory, faint */
 }
 
 @theme inline {
@@ -41,7 +41,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #0b0b0c;
+  color: var(--bg);
 }
 
 /* ---------- grain overlay ---------- */

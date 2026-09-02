@@ -6,7 +6,6 @@ import ScrambleLink from "./ScrambleLink";
 const LINKS = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#work" },
-  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
