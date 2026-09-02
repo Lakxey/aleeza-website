@@ -29,7 +29,7 @@ export default function CustomCursor() {
 
     const loop = () => {
      x += (tx - x) * 0.55;
-y += (ty - y) * 0.55;
+     y += (ty - y) * 0.55;
       dot.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
       raf = requestAnimationFrame(loop);
     };
