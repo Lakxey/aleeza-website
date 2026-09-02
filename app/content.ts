@@ -32,7 +32,6 @@ export const skills = [
   "Accounting & Bookkeeping",
   "Bank Reconciliation",
   "Financial Reporting",
-  "MySQL",
   "Client Handling",
   "Research & Analysis",
   "Attention to Detail",

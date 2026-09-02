@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
    :root {
-     --bg: #f7f6f1;
-     --bg-soft: #edece5;
-     --fg: #14140f;
-     --fg-dim: #6b6a62;
-     --accent: #5c8a00;
-     --line: rgba(20, 20, 15, 0.12);
-   }
+  --bg: #3a345b; /* Jacarta */
+  --bg-soft: #4b1535; /* Brown Chocolate */
+  --fg: #f3c8dd; /* Queen Pink */
+  --fg-dim: #71557a; /* Old Lavender */
+  --accent: #d183a9; /* Middle Purple */
+  --line: rgba(243, 200, 221, 0.16);
+}
 
 @theme inline {
   --color-bg: var(--bg);
