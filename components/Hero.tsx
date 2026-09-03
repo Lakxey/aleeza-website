@@ -54,16 +54,6 @@ export default function Hero() {
       >
         {site.tagline}
       </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="absolute bottom-10 left-6 flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-fg-dim sm:left-10"
-      >
-        <span className="inline-block h-8 w-px animate-pulse bg-fg-dim" />
-        Scroll
-      </motion.div>
     </section>
   );
 }

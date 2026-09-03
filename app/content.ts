@@ -19,14 +19,12 @@ export const site = {
 export const about = {
   heading: "About",
   intro: "okay, but who is Aleeza? 👀",
-  // Wrap words in **double asterisks** to make them bold — the About
-  // section turns those into <strong> automatically.
   paragraphs: [
     "Finance girl with a slightly unreasonable amount of curiosity. 🩷🪃",
     "I spend a good part of my day making sure numbers behave themselves. 📊💅",
-    "That means **bookkeeping, reconciliations, financial reporting, tax preparation & compliance** for US-based businesses — plus the occasional \"wait... why doesn't this number match?\" investigation. 🤷🔍",
+    "That means bookkeeping, reconciliations, financial reporting, tax preparation & compliance for US-based businesses — plus the occasional \"wait... why doesn't this number match?\" investigation. 🤷🔍",
     "But accounting is only one part of what I'm into. ✨",
-    "I've worked across **advisory, financial research, business analysis, legal documentation, and MySQL** — which is probably a very long way of saying:",
+    "I've worked across advisory, financial research, business analysis, legal documentation, and MySQL — which is probably a very long way of saying:",
     "I like figuring things out. 💬✨",
     "Give me a messy spreadsheet, a confusing business problem, or a system I've never used before, and my first instinct is usually:",
     "\"okay... let's see.\" 💅",
@@ -50,6 +48,39 @@ export const highlights = [
   "Team Mentor",
   "Finance Graduate",
   "Taxation-Focused",
+];
+
+export type ToolCategory = {
+  title: string;
+  tools: string;
+  description: string;
+};
+
+export const toolCategories: ToolCategory[] = [
+  {
+    title: "Accounting & Tax",
+    tools: "QuickBooks Online · ProSeries · Intuit Link",
+    description:
+      "Bookkeeping, tax preparation, client documents, reporting, and all the little things that make the numbers behave. 📊",
+  },
+  {
+    title: "Payroll",
+    tools: "ADP · Paychex · Gusto",
+    description:
+      "Payroll processing, employee information, and keeping the behind-the-scenes stuff organized. 💸",
+  },
+  {
+    title: "Client Management",
+    tools: "Salesforce",
+    description:
+      "Keeping client information, communication, and workflows in one place. 🤝",
+  },
+  {
+    title: "Work & Collaboration",
+    tools: "Microsoft 365 · Google Workspace",
+    description:
+      "The everyday essentials — spreadsheets, documents, presentations, email, files, and probably more tabs than necessary. 🫠",
+  },
 ];
 
 export type Service = {
@@ -89,7 +120,6 @@ export const services: Service[] = [
       "Looking beyond the numbers to understand processes, systems, and business problems — then finding practical ways to make them work better.",
   },
 ];
-
 
 export type ExperienceEntry = {
   company: string;

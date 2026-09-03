@@ -34,7 +34,7 @@ export default function Experience() {
     <section id="work" className="relative px-6 py-28 sm:px-10 sm:py-36">
       <Reveal>
         <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
-          03 / Work Experience
+          04 / Work Experience
         </span>
       </Reveal>
 

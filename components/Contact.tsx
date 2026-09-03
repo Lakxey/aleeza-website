@@ -10,7 +10,7 @@ export default function Contact() {
     >
       <Reveal>
         <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
-          04 / Contact
+          05 / Contact
         </span>
       </Reveal>
 
@@ -31,9 +31,11 @@ export default function Contact() {
           </MagneticButton>
 
           <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {socials.filter((s) => s.label !== "Email").map((s) => {
-              return <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-fg-dim transition-colors hover:text-fg">{s.label}</a>;
-            })}
+            {socials
+              .filter((s) => s.label !== "Email")
+              .map((s) => {
+                return <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-fg-dim transition-colors hover:text-fg">{s.label}</a>;
+              })}
           </div>
         </div>
       </Reveal>

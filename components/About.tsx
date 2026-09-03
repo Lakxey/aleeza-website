@@ -1,19 +1,6 @@
 import { about } from "@/app/content";
 import Reveal from "./Reveal";
 
-// Turns "text **bold** text" into [text, <strong>bold</strong>, text]
-function renderBold(text: string) {
-  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
-    i % 2 === 1 ? (
-      <strong key={i} className="font-semibold text-fg">
-        {part}
-      </strong>
-    ) : (
-      part
-    )
-  );
-}
-
 export default function About() {
   return (
     <section id="about" className="px-6 py-28 sm:px-10 sm:py-36">
@@ -36,7 +23,7 @@ export default function About() {
               key={i}
               className="max-w-2xl font-display text-2xl italic leading-relaxed text-fg-dim sm:text-3xl"
             >
-              {renderBold(p)}
+              {p}
             </p>
           ))}
         </div>
