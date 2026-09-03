@@ -16,9 +16,20 @@ export const site = {
 
 export const about = {
   heading: "About",
+  intro: "okay, but who is Aleeza? 👀",
+  // Wrap words in **double asterisks** to make them bold — the About
+  // section turns those into <strong> automatically.
   paragraphs: [
-    "I'm a BBA graduate specializing in Finance, currently working as a Senior Accounts Associate at Koirala Advisors — managing bookkeeping and accounting for multiple US-based client companies, from transaction recording and bank reconciliations to financial reporting and month-end close.",
-    "Before that, I worked as an Advisory Associate Intern, supporting company formation, legal documentation, and client-facing research. I'm QuickBooks Online certified (Level 1 & 2), and known for careful, detail-driven work and clear client communication.",
+    "Finance girl with a slightly unreasonable amount of curiosity. 🩷🪃",
+    "I spend a good part of my day making sure numbers behave themselves. 📊💅",
+    "That means **bookkeeping, reconciliations, financial reporting, tax preparation & compliance** for US-based businesses — plus the occasional \"wait... why doesn't this number match?\" investigation. 🤷🔍",
+    "But accounting is only one part of what I'm into. ✨",
+    "I've worked across **advisory, financial research, business analysis, legal documentation, and MySQL** — which is probably a very long way of saying:",
+    "I like figuring things out. 💬✨",
+    "Give me a messy spreadsheet, a confusing business problem, or a system I've never used before, and my first instinct is usually:",
+    "\"okay... let's see.\" 💅",
+    "I like finding patterns 🔍, asking too many questions ❓, making complicated things easier to understand 🪄, and learning things simply because they're interesting. 💡",
+    "I don't have a perfectly linear career plan — and honestly, I'm okay with that. 🦋✨",
   ],
   facts: [
     { label: "Based in", value: "Lalitpur, Nepal" },
