@@ -30,6 +30,12 @@ export default function Experience() {
   const svgWidth = STEP_WIDTH * n;
   const svgHeight = BASE_HEIGHT + (n - 1) * HEIGHT_STEP;
 
+  // Small, fixed gap between a step's tread and its label, plus enough
+  // headroom above the tallest step for the label text itself.
+  const LABEL_GAP = 14;
+  const LABEL_ROOM = 80;
+  const wrapperHeight = svgHeight + LABEL_GAP + LABEL_ROOM;
+
   return (
     <section id="work" className="relative px-6 py-28 sm:px-10 sm:py-36">
       <Reveal>
@@ -40,33 +46,38 @@ export default function Experience() {
 
       <Reveal delay={0.08}>
         <div className="mt-14 overflow-x-auto pb-2">
-          <div className="mx-auto" style={{ width: svgWidth }}>
-            {/* labels — each one sits directly above its own step */}
-            <div className="flex" style={{ height: svgHeight * 0.55 }}>
-              {stairSteps.map((role, i) => {
-                const stepHeight = BASE_HEIGHT + i * HEIGHT_STEP;
-                return (
-                  <div
-                    key={`label-${role.title}-${role.dates}`}
-                    className="flex flex-col justify-end px-2 text-center"
-                    style={{
-                      width: STEP_WIDTH,
-                      paddingBottom: svgHeight - stepHeight - svgHeight * 0.55 + 12,
-                    }}
-                  >
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-fg-dim">
-                      {role.dates}
-                    </p>
-                    <p className="mt-1 font-display text-base italic leading-snug text-fg sm:text-lg">
-                      {role.title}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+          <div
+            className="relative mx-auto"
+            style={{ width: svgWidth, height: wrapperHeight }}
+          >
+            {/* labels — each one sits a fixed, small gap above its own step,
+               so the label always hugs its step regardless of step height */}
+            {stairSteps.map((role, i) => {
+              const stepHeight = BASE_HEIGHT + i * HEIGHT_STEP;
+              return (
+                <div
+                  key={`label-${role.title}-${role.dates}`}
+                  className="absolute px-2 text-center"
+                  style={{
+                    left: i * STEP_WIDTH,
+                    width: STEP_WIDTH,
+                    bottom: stepHeight + LABEL_GAP,
+                  }}
+                >
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-fg-dim">
+                    {role.dates}
+                  </p>
+                  <p className="mt-1 font-display text-base italic leading-snug text-fg sm:text-lg">
+                    {role.title}
+                  </p>
+                </div>
+              );
+            })}
 
-            {/* one connected staircase shape, ascending left to right */}
+            {/* one connected staircase shape, ascending left to right,
+               pinned to the bottom of the wrapper */}
             <svg
+              className="absolute bottom-0 left-0"
               width={svgWidth}
               height={svgHeight}
               viewBox={`0 0 ${svgWidth} ${svgHeight}`}
