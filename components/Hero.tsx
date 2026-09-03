@@ -13,6 +13,15 @@ export default function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className="absolute top-24 left-6 font-display text-2xl italic text-accent sm:left-10 sm:text-3xl"
+      >
+        {site.welcome}
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
         className="font-mono text-xs uppercase tracking-[0.3em] text-fg-dim"
       >
         {site.role} · {site.location}
@@ -45,6 +54,16 @@ export default function Hero() {
       >
         {site.tagline}
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="absolute bottom-10 left-6 flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-fg-dim sm:left-10"
+      >
+        <span className="inline-block h-8 w-px animate-pulse bg-fg-dim" />
+        Scroll
+      </motion.div>
     </section>
   );
 }

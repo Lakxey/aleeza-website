@@ -12,6 +12,8 @@ export const site = {
   tagline:
     "Keeping US-based clients' books accurate, compliant, and on time.",
   availability: "", // set to "" to hide the badge
+  welcome: "Welcome, glad you found your way here ✨",
+  farewell: "You made it this far ✨ — thanks for reading.",
 };
 
 export const about = {
@@ -39,24 +41,55 @@ export const about = {
   ],
 };
 
-export const skills = [
-  "Accounting & Bookkeeping",
-  "Bank Reconciliation",
-  "Financial Reporting",
-  "Client Handling",
-  "Research & Analysis",
-  "Attention to Detail",
+export const highlights = [
+  "20+ U.S. Businesses",
+  "15+ Monthly Clients",
+  "50+ Tax Clients",
+  "Multiple U.S. States",
+  "Client-Facing",
+  "Team Mentor",
+  "Finance Graduate",
+  "Taxation-Focused",
 ];
 
-export const tools = [
-  "QuickBooks Online",
-  "Salesforce",
-  "ADP",
-  "Gusto",
-  "Paychex",
-  "Intuit Link",
-  "ProSeries",
+export type Service = {
+  title: string;
+  description: string;
+};
+
+export const services: Service[] = [
+  {
+    title: "Accounting & Bookkeeping 📊",
+    description:
+      "Keeping the numbers in check — from day-to-day bookkeeping and transaction recording to bank reconciliations, financial records, and month-end support.",
+  },
+  {
+    title: "Tax Preparation & Compliance 🧾",
+    description:
+      "Supporting US-based businesses with tax preparation, compliance requirements, year-end reporting, and the documentation that comes with it.",
+  },
+  {
+    title: "Financial Reporting 📈",
+    description:
+      "Turning financial data into clear, organized reports and summaries that actually make sense.",
+  },
+  {
+    title: "Business & Financial Research 🔍",
+    description:
+      "Digging into numbers, markets, business models, and financial information to find patterns, compare options, and turn research into useful insights.",
+  },
+  {
+    title: "Advisory & Compliance 📄",
+    description:
+      "Supporting company formation, legal documentation, state-specific requirements, agreements, and other advisory-related work for US-based businesses.",
+  },
+  {
+    title: "Business Analysis 💡",
+    description:
+      "Looking beyond the numbers to understand processes, systems, and business problems — then finding practical ways to make them work better.",
+  },
 ];
+
 
 export type ExperienceEntry = {
   company: string;
