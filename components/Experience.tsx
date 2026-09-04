@@ -56,8 +56,7 @@ export default function Experience() {
             style={{ aspectRatio: `${svgWidth} / ${wrapperHeight}` }}
           >
             {/* one connected staircase shape, ascending left to right,
-               pinned to the bottom of the wrapper and stretched to fill it.
-               Stays visible at all times — nothing ever covers it. */}
+               pinned to the bottom of the wrapper and stretched to fill it. */}
             <svg
               className="pointer-events-none absolute bottom-0 left-0 w-full"
               style={{ height: `${(svgHeight / wrapperHeight) * 100}%` }}
@@ -92,75 +91,78 @@ export default function Experience() {
               })}
             </svg>
 
-            {/* each role sits a fixed, small gap above its own step. Click the
-               title and its description expands right there, in place, on
-               top of the ladder — the ladder itself never gets covered up. */}
             {stairSteps.map((role, i) => {
               const stepHeight = BASE_HEIGHT + i * HEIGHT_STEP;
               const key = keyOf(role);
               const isActive = activeKey === key;
-              const centerPct = ((i + 0.5) / n) * 100;
-              const bottomPct = ((stepHeight + LABEL_GAP) / wrapperHeight) * 100;
+              const leftPct = (i / n) * 100;
+              const widthPct = (1 / n) * 100;
+              const labelBottomPct = ((stepHeight + LABEL_GAP) / wrapperHeight) * 100;
+              const stepHeightPct = (stepHeight / wrapperHeight) * 100;
+
               return (
-                <div
-                  key={key}
-                  className="absolute z-10 text-center"
-                  style={{
-                    left: `${centerPct}%`,
-                    bottom: `${bottomPct}%`,
-                    transform: "translateX(-50%)",
-                  }}
-                >
-                  <AnimatePresence mode="wait" initial={false}>
-                    {isActive ? (
+                <div key={key}>
+                  {/* dates + title, sitting just above the step — fades out
+                     while its own description is open */}
+                  <button
+                    onClick={() => setActiveKey(isActive ? null : key)}
+                    className="absolute px-2 text-center transition-opacity"
+                    style={{
+                      left: `${leftPct}%`,
+                      width: `${widthPct}%`,
+                      bottom: `${labelBottomPct}%`,
+                      opacity: isActive ? 0 : 1,
+                      pointerEvents: isActive ? "none" : "auto",
+                    }}
+                  >
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-fg-dim sm:text-xs">
+                      {role.dates}
+                    </p>
+                    <p className="mt-1 font-display text-base italic leading-snug text-fg transition-colors hover:text-accent sm:text-xl">
+                      {role.title}
+                    </p>
+                  </button>
+
+                  {/* the description itself — sized and positioned to sit
+                     exactly on top of this step's own colored block, right
+                     inside the ladder rather than floating above it */}
+                  <AnimatePresence>
+                    {isActive && (
                       <motion.div
                         key="card"
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 8 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="w-[85vw] max-w-[300px] rounded-xl border border-line bg-bg-soft/95 p-4 text-left shadow-lg backdrop-blur-sm sm:max-w-[320px]"
+                        className="absolute z-10 flex flex-col overflow-y-auto rounded-t-lg border border-line bg-bg/92 p-2 text-left backdrop-blur-sm sm:p-4"
+                        style={{
+                          left: `${leftPct}%`,
+                          width: `${widthPct}%`,
+                          bottom: 0,
+                          height: `${stepHeightPct}%`,
+                        }}
                       >
-                        <p className="font-mono text-[10px] uppercase tracking-widest text-accent">
+                        <p className="font-mono text-[9px] uppercase tracking-widest text-accent sm:text-xs">
                           {role.dates}
                         </p>
-                        <h3 className="mt-1 font-display text-lg italic text-fg sm:text-xl">
+                        <h3 className="mt-1 font-display text-sm italic leading-tight text-fg sm:text-lg">
                           {role.title}
                         </h3>
-                        <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-fg-dim">
-                          {role.company}
-                        </p>
-                        <ul className="mt-3 space-y-2">
+                        <ul className="mt-1 space-y-1 overflow-y-auto sm:mt-2 sm:space-y-1.5">
                           {role.points.map((point, j) => (
-                            <li key={j} className="flex gap-2 text-xs text-fg-dim sm:text-sm">
-                              <span className="mt-1 text-accent">—</span>
+                            <li key={j} className="flex gap-1.5 text-[9px] leading-snug text-fg-dim sm:text-xs">
+                              <span className="text-accent">—</span>
                               <span>{point}</span>
                             </li>
                           ))}
                         </ul>
                         <button
                           onClick={() => setActiveKey(null)}
-                          className="mt-3 font-mono text-[10px] uppercase tracking-widest text-fg-dim transition-colors hover:text-fg"
+                          className="mt-auto self-start pt-1 font-mono text-[9px] uppercase tracking-widest text-fg-dim transition-colors hover:text-fg sm:text-[10px]"
                         >
                           ✕ Close
                         </button>
                       </motion.div>
-                    ) : (
-                      <motion.button
-                        key="label"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setActiveKey(key)}
-                        className="px-2"
-                      >
-                        <p className="font-mono text-[10px] uppercase tracking-widest text-fg-dim sm:text-xs">
-                          {role.dates}
-                        </p>
-                        <p className="mt-1 font-display text-base italic leading-snug text-fg transition-colors hover:text-accent sm:text-xl">
-                          {role.title}
-                        </p>
-                      </motion.button>
                     )}
                   </AnimatePresence>
                 </div>
