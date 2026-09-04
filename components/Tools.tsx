@@ -57,10 +57,10 @@ export default function Tools() {
                 transition={{ duration: 0.3 }}
                 className="rounded-2xl border border-line bg-bg-soft p-8"
               >
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                                <p className="font-mono text-xl font-semibold tracking-wide text-accent sm:text-2xl">
                   {current.tools}
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-fg-dim">
+                <p className="mt-4 text-base leading-relaxed text-fg-dim">
                   {current.description}
                 </p>
               </motion.div>

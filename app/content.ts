@@ -12,8 +12,9 @@ export const site = {
   tagline:
     "Keeping US-based clients' books accurate, compliant, and on time.",
   availability: "", // set to "" to hide the badge
-  welcome: "Welcome, glad you found your way here ✨",
-  farewell: "You made it this far ✨ — thanks for reading.",
+   welcome: "Welcome, glad you found your way here ✨",
+  lookAround: "You made it this far ✨ — thanks for reading.",
+    farewell: "✨Viva La Vida✨",
 };
 
 export const about = {

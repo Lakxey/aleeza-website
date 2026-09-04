@@ -18,15 +18,6 @@ export default function Hero() {
         {site.welcome}
       </motion.p>
 
-      <motion.p
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="font-mono text-xs uppercase tracking-[0.3em] text-fg-dim"
-      >
-        {site.role} · {site.location}
-      </motion.p>
-
       <h1 className="mt-6 max-w-5xl text-[13vw] leading-[0.9] tracking-tight sm:text-[9vw] lg:text-[7.5vw]">
         <motion.span
           initial={{ opacity: 0, y: 40 }}
@@ -52,7 +43,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="mt-8 max-w-md text-lg text-fg-dim"
       >
-        {site.tagline}
+        {site.lookAround}
       </motion.p>
     </section>
   );

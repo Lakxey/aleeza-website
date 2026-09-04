@@ -21,7 +21,7 @@ export default function About() {
           {about.paragraphs.map((p, i) => (
             <p
               key={i}
-              className="max-w-2xl font-display text-2xl italic leading-relaxed text-fg-dim sm:text-3xl"
+              className="max-w-4xl font-display text-lg italic leading-relaxed text-fg-dim sm:text-xl"
             >
               {p}
             </p>
