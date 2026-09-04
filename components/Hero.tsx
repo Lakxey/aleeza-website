@@ -15,7 +15,6 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="absolute top-24 left-6 font-display text-2xl italic text-accent sm:left-10 sm:text-3xl"
       >
-        {site.welcome}
       </motion.p>
 
       <h1 className="mt-6 max-w-5xl text-[13vw] leading-[0.9] tracking-tight sm:text-[9vw] lg:text-[7.5vw]">

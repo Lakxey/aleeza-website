@@ -12,8 +12,7 @@ export const site = {
   tagline:
     "Keeping US-based clients' books accurate, compliant, and on time.",
   availability: "", // set to "" to hide the badge
-   welcome: "Welcome, glad you found your way here ✨",
-  lookAround: "You made it this far ✨ — thanks for reading.",
+  lookAround: "You made it this far ✨ — Have a look around.",
     farewell: "✨Viva La Vida✨",
 };
 

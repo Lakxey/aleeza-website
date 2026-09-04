@@ -11,7 +11,7 @@ export default function About() {
       </Reveal>
 
       <Reveal delay={0.05}>
-        <h2 className="mt-6 max-w-3xl font-sans text-3xl font-bold text-fg sm:text-5xl">
+        <h2 className="mt-6 max-w-3xl font-display text-3xl italic text-fg sm:text-5xl">
           {about.intro}
         </h2>
       </Reveal>
@@ -21,7 +21,7 @@ export default function About() {
           {about.paragraphs.map((p, i) => (
             <p
               key={i}
-              className="max-w-4xl font-display text-lg italic leading-relaxed text-fg-dim sm:text-xl"
+              className="max-w-4xl font-sans text-sm font-bold leading-relaxed text-fg-dim sm:text-base"
             >
               {p}
             </p>
