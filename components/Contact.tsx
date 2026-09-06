@@ -21,22 +21,22 @@ export default function Contact() {
       </Reveal>
 
       <Reveal delay={0.2}>
-        <div className="mt-12 flex flex-col items-start gap-10 sm:flex-row sm:items-center">
-          <MagneticButton
-            href={`mailto:${site.email}`}
-            className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-sm tracking-widest text-bg"
-          >
-            {site.email}
-            <span>↗</span>
-          </MagneticButton>
-
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {socials
-              .filter((s) => s.label !== "Email")
-              .map((s) => {
-                return <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-fg-dim transition-colors hover:text-fg">{s.label}</a>;
-              })}
-          </div>
+        <div className="mt-12 flex flex-wrap items-center gap-6">
+          {socials.map((s) => {
+            const isEmail = s.label === "Email";
+            return (
+              <MagneticButton
+                key={s.label}
+                href={s.href}
+                target={isEmail ? undefined : "_blank"}
+                rel={isEmail ? undefined : "noopener noreferrer"}
+                className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-mono text-sm tracking-widest text-bg"
+              >
+                {isEmail ? site.email : s.label}
+                <span>↗</span>
+              </MagneticButton>
+            );
+          })}
         </div>
       </Reveal>
     </section>

@@ -209,7 +209,6 @@ export const projects: Project[] = [
 export const socials = [
   { label: "Email", href: "mailto:raialeeza2017@gmail.com" },
   { label: "LinkedIn", href: "https://linkedin.com/in/aleeza-rai/" },
-  { label: "Phone", href: "tel:+9779840522269" },
 ];
 
 export const contact = {
