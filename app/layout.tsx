@@ -17,7 +17,7 @@ import { site } from "./content";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: `${site.name} — ${site.role}`,
+  title: site.name,
   description: site.tagline,
 };
 
