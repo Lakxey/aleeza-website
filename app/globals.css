@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #1c1917; /* deep charcoal */
-  --bg-soft: #221e1b; /* slightly lighter charcoal */
-  --fg: #f5ecdc; /* warm ivory */
-  --fg-dim: rgba(245, 236, 220, 0.62); /* warm ivory, dimmed */
-  --accent: #c9a24b; /* warm gold */
-  --line: rgba(245, 236, 220, 0.14); /* warm ivory, faint */
+  --bg: #f6d3de; /* soft pink */
+  --bg-soft: #efc0d0; /* slightly deeper pink */
+  --fg: #2b1620; /* near-black plum */
+  --fg-dim: rgba(43, 22, 32, 0.62); /* dark plum, dimmed */
+  --accent: #a53860; /* deep rose */
+  --line: rgba(43, 22, 32, 0.14); /* dark plum, faint */
 }
 
 @theme inline {
@@ -105,6 +105,25 @@ body {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 22s linear infinite;
+}
+
+.marquee-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
